@@ -3,8 +3,8 @@ import React from 'react';
 const Header = () => {
     return (
         <header>
-            <div className="holder">
-                <h1>Resto X</h1>
+            <div className="">
+                <img className="max-h-64 min-w-full" alt="banner" src="/banner-header.png"/>
             </div>
         </header>
     )

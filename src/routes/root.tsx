@@ -12,9 +12,10 @@ import Carta from '../pages/Carta'
 function Root() {
   return (
     <>
-    <Header/>
+    
     <Router>
       <Nav/>
+      <Header/>
         <Routes>
         <Route path="/" element={<HomePage/>}/>
         <Route path="/contacto"  element={<ContactoPage/>}/>
