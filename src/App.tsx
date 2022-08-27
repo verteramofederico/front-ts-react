@@ -1,6 +1,3 @@
-import React from 'react';
-import './App.css';
-
 import Root from './routes/root'
 
 function App() {
