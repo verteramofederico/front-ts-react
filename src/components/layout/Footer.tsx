@@ -37,8 +37,8 @@ const Footer = () => {
                 </div>
             </div>
             <div>
-                <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400 lg:my-4">© 2022 
-                <a href="https://www.linkedin.com/in/federico-verteramo/" target="_blank" rel="noreferrer"> Federico Verteramo</a> . Web developer.
+                <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400 lg:my-4"> 
+                <a href="https://www.linkedin.com/in/federico-verteramo/" target="_blank" rel="noreferrer">© 2022 Federico Verteramo . Web developer.</a> 
                 </span>
                 <hr className="my-6  border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-4"/>
             </div>
