@@ -2,9 +2,9 @@ import React from 'react';
 
 const NosotrosPage = () => {
     return (
-        <section className="relative pt-24 pb-32 overflow-hidden">
+        <section className="relative pt-16 pb-24 overflow-hidden">
             <div className="container mx-auto px-4">
-                <h2 className="mb-5 max-w-2xl mx-auto font-heading font-bold text-center text-5xl sm:text-5xl text-gray-900">
+                <h2 className="mb-1 max-w-2xl mx-auto font-heading font-bold text-center text-5xl sm:text-5xl text-gray-900">
                     Nuestra historia y presente
                 </h2>
                 <p className="mt-5 text-base max-w-2xl mx-auto text-gray-600">

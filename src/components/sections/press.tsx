@@ -1,6 +1,6 @@
 const Press = () => {
     return (
-        <section className="relative pt-24 pb-32 overflow-hidden">
+        <section className="relative pt-16 pb-16 overflow-hidden">
             <div className="container mx-auto px-4">
                 <h2 className="mb-5 max-w-2xl mx-auto font-heading font-bold text-center text-5xl sm:text-5xl text-gray-900">
                     Reseñas de prensa
