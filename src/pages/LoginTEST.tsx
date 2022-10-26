@@ -12,7 +12,7 @@ const LoginTEST = () => {
     const handleSubmit = (event: { preventDefault: () => void; }) => {
         event.preventDefault()
         const cargarNovedades =async () => {
-
+            
             const userInfo = { user, password}
 
             const reponse = await axios.post('http://localhost:3001/api/login', userInfo)

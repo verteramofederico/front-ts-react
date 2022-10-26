@@ -20,9 +20,6 @@ const Nav = () => {
                 <Link to="/nosotros" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
                     Nosotros
                 </Link>
-                <Link to="/carta" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-                    Carta
-                </Link>
                 <Link to="/novedades" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
                     Novedades
                 </Link>

@@ -7,9 +7,9 @@ import ContactoPage from '../pages/ContactoPage'
 import HomePage from '../pages/HomePage'
 import NosotrosPage from '../pages/NosotrosPage'
 import NovedadesPage from '../pages/NovedadesPage'
-import Carta from '../pages/Carta'
 import JwtTEST from '../pages/JwtTEST'
 import LoginTEST from '../pages/LoginTEST'
+import AdminNovedadesPage from '../pages/AdminNovedadesPage'
 
 function Root() {
   return (
@@ -21,9 +21,9 @@ function Root() {
         <Routes>
         <Route path="/" element={<HomePage/>}/>
         <Route path="/contacto"  element={<ContactoPage/>}/>
-        <Route path="/carta"  element={<Carta/>}/>
         <Route path="/nosotros"  element={<NosotrosPage/>}/>
         <Route path="/novedades" element={<NovedadesPage/>}/>
+        <Route path="/admin/novedades" element={<AdminNovedadesPage/>}/>
         <Route path="/login" element={<LoginTEST/>}/>
         <Route path="/jwt" element={<JwtTEST/>}/>
         </Routes>
