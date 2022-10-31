@@ -21,7 +21,7 @@ const LoginTEST = () => {
                     token: reponse.data.token, 
                     name: reponse.data.name,
                     id: reponse.data.id }))
-                window.open("http://localhost:3001/admin/novedades", '_blank', 'noopener,noreferrer');
+                window.open(`${process.env.REACT_APP_API_URL}/admin/novedades`, '_blank', 'noopener,noreferrer');
                 navigate('/novedades')
             }
             if (reponse.data.mensaje && reponse.data.mensaje.length > 3) {

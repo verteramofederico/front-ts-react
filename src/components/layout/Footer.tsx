@@ -19,11 +19,6 @@ const Footer = () => {
                         </Link>
                         </li>
                         <li>
-                        <Link to="/carta" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-                            Carta
-                        </Link>            
-                        </li>
-                        <li>
                         <Link to="/novedades" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
                             Novedades
                         </Link>           
