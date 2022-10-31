@@ -1,4 +1,4 @@
-import Press from '../components/sections/Press'
+import Press from '../components/sections/press'
 
 const HomePage = () => {
     return (
