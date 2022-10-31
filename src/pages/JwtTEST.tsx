@@ -9,7 +9,7 @@ const JwtTEST = () => {
         const cargarNovedades =async () => {
                 const userData = JSON.parse(localStorage.getItem('user-data')|| '{}') 
                 if (userData && userData.token) {
-                const jwtReponse = await axios.get('http://localhost:3001/api/test', {
+                const jwtReponse = await axios.get(`${process.env.REACT_APP_API_URL}/api/test`, {
                     headers: {
                         'authorization': `Bearer ${userData.token}`
                     }})

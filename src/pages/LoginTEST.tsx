@@ -15,7 +15,7 @@ const LoginTEST = () => {
             
             const userInfo = { user, password}
 
-            const reponse = await axios.post('http://localhost:3001/api/login', userInfo)
+            const reponse = await axios.post(`${process.env.REACT_APP_API_URL}/api/login`, userInfo)
             if (reponse.data.name) {
                 localStorage.setItem('user-data', JSON.stringify({ 
                     token: reponse.data.token, 

@@ -18,7 +18,8 @@ const AdminNovedadesPage = () => {
     useEffect(() => {
         const cargarNovedades =async () => {
             setLoading(true)
-            const reponse = await axios.get('http://localhost:3001/api/novedades')
+            //const reponse = await axios.get('http://localhost:3001/api/novedades')
+            const reponse = await axios.get(`${process.env.REACT_APP_API_URL}/api/novedades`)
             setNovedades(reponse.data)
             setLoading(false)
         };

@@ -46,7 +46,8 @@ const AdminNovedadModificar = (props: novedadTypeModificar) => {
         
         const formData = new FormData();
         formData.append("selectedFile", newImage);
-        await axios.post('http://localhost:3001/api/modificar', 
+        //await axios.post('http://localhost:3001/api/modificar', 
+        await axios.post(`${process.env.REACT_APP_API_URL}/api/modificar`, 
                 {form, data: formData}, 
                 { headers: { 
                     'authorization': `Bearer ${userData.token}`, 

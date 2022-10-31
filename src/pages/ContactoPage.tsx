@@ -26,7 +26,8 @@ const ContactoPage = () => {
         event.preventDefault();
         setMsg('');
         setSending(true)
-        const response = await axios.post('http://localhost:3001/api/contacto', formData)
+        //const response = await axios.post('http://localhost:3001/api/contacto', formData)
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/contacto`, formData)
         setSending(false)
         setMsg(response.data.message)
         if (response.data.error === false) {
