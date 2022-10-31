@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
 import AdminNovedadItem from "../components/sections/AdminNovedadItem"
+import AlertMessage from '../components/sections/AlertMessage'
 
 const AdminNovedadesPage = () => {
     type novedadType = {
@@ -25,9 +26,13 @@ const AdminNovedadesPage = () => {
         cargarNovedades()
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [novedadModificada])
-
+    
+    let parrafo1 = "Solo es posible modificar una novedad estando logueado"
+    let parrafo2 = "La verificacion se realiza con jwt. El formulario se muestra pero no se concretara la operacion sin token"
+    let parrafo3 = "Mejoras programadas."
     return (
         <section className="holder text-center">
+            <AlertMessage parrafo1={parrafo1} parrafo2={parrafo2} parrafo3={parrafo3}/>
             <h2 className="text-4xl my-9">Novedades</h2>
             {loading ? (
                 <p>Cargando...</p>

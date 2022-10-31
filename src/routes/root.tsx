@@ -8,7 +8,7 @@ import HomePage from '../pages/HomePage'
 import NosotrosPage from '../pages/NosotrosPage'
 import NovedadesPage from '../pages/NovedadesPage'
 import JwtTEST from '../pages/JwtTEST'
-import LoginTEST from '../pages/LoginTEST'
+import LoginTEST from '../pages/Login'
 import AdminNovedadesPage from '../pages/AdminNovedadesPage'
 
 function Root() {

@@ -16,6 +16,8 @@ const NosotrosPage = () => {
                 <p className="mt-5 text-base max-w-2xl mx-auto text-center text-gray-600">
                 Dentro de su completa carta, donde las pastas son protagonistas por excelencia, encontrará una amplia variedad de opciones apta para los paladares más exigentes.
                 </p>
+                <img className="mb-8 max-w-md m-auto mt-10" src="/roma.jpg" alt="" />
+
             </div>
     </section>
     )

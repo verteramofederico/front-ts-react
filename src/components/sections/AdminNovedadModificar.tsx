@@ -6,48 +6,34 @@ type novedadTypeModificar = {
     id: string;
     title: string;
     subtitle: string
-    image: string;
     body: string;
     setEditNew: any;
     setNovedadModificada: any
 }
 
 const AdminNovedadModificar = (props: novedadTypeModificar) => {
-    const { id, title, subtitle, image, body, setEditNew, setNovedadModificada} = props
+    const { id, title, subtitle, body, setEditNew, setNovedadModificada} = props
 
     const [form, setForm] = useState({
         id: id,
         title: title,
         subtitle: subtitle,
         body: body,
-        img_original: image,
-        img_delete: ""
     });
 
-    const [newImage, setNewImage] = useState<any>([]);
 
-    const handleChange = (event: { target: { id: any; value: any, files: any }; }) => {
+    const handleChange = (event: { target: { id: any; value: any}; }) => {
         setForm({
         ...form,
         [event.target.id]: event.target.value
         })
-        console.log(form);
     };
-
-    const handleChangeImage = (event: { target: { files: any; }; }) => {
-        console.log(event.target.files[0])
-        setNewImage(event.target.files[0])
-        console.log(newImage)
-    }
 
     const handleSubmit = async (event: { preventDefault: () => void; }) => {
         event.preventDefault()
         const userData = JSON.parse(localStorage.getItem('user-data')|| '{}')   
-        
-        const formData = new FormData();
-        formData.append("selectedFile", newImage);
         await axios.post(`${process.env.REACT_APP_API_URL}/api/modificar`, 
-                {form, data: formData}, 
+                form, 
                 { headers: { 
                     'authorization': `Bearer ${userData.token}`, 
                     "Content-Type": "multipart/form-data" 
@@ -80,29 +66,6 @@ const AdminNovedadModificar = (props: novedadTypeModificar) => {
                 onChange={handleChange}
                 />
                 </div>
-
-                <div className="mt-8">
-                <input
-                type="file"
-                onChange={handleChangeImage}
-                /* onChange={handleChange} */
-                />
-                </div>
-
-                <label>
-                <input 
-                className="m-8"
-                type="checkbox" 
-                name="img_delete" 
-                id="img_delete"
-                value="1"
-                onChange={handleChange}
-                /> 
-                Eliminar imagen actual?
-                </label>
-
-                <input type="hidden" name="img_original" 
-                value={form.img_original}/>
 
                 <div>
                 <div><label className="text-2xl" htmlFor="body">Cuerpo</label></div>

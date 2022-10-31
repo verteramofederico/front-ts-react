@@ -1,8 +1,9 @@
 import { useState } from "react"
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
+import AlertMessage from '../components/sections/AlertMessage'
 
-const LoginTEST = () => {
+const Login = () => {
     const navigate = useNavigate();
 
     const [user, setUser] = useState<string>('');
@@ -22,7 +23,7 @@ const LoginTEST = () => {
                     name: reponse.data.name,
                     id: reponse.data.id }))
                 window.open(`${process.env.REACT_APP_API_URL}/admin/novedades`, '_blank', 'noopener,noreferrer');
-                navigate('/novedades')
+                navigate('/admin/novedades')
             }
             if (reponse.data.mensaje && reponse.data.mensaje.length > 3) {
                 setErrorMessage("Credenciales incorrectas")
@@ -33,8 +34,14 @@ const LoginTEST = () => {
         setPassword('');
     };
 
+    let parrafo1 = "El siguiente formulario solicitara credenciales. En caso de ser validas realizara dos acciones:";
+    let parrafo2 = "1)Abrira una nueva ventana hacia el back-end donde tenemos el administrador en pleno funcionamiento. Solicitara nuevamente credenciales.";
+    let parrafo3 = "2)Redireccionara a un administrador donde desde react podemos modificar la info de las novedades pero no agregar ni modificar imagenes. Estas son upgrades futuros.";
     return (
-        <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
+        <>
+        <AlertMessage parrafo1={parrafo1} parrafo2={parrafo2} parrafo3={parrafo3}/>
+
+        <div className="relative flex flex-col justify-center min-h-screen">
             <div className="w-full p-6 m-auto bg-white rounded-md shadow-md lg:max-w-xl">
                     <h1 className="text-3xl font-semibold text-center text-primary underline">
                     Acceder
@@ -76,7 +83,8 @@ const LoginTEST = () => {
                 </form>
             </div>
         </div>
+        </>
     )
 }
 
-export default LoginTEST
+export default Login

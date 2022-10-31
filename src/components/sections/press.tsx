@@ -14,7 +14,7 @@ const Press = () => {
                 <div className="w-full md:w-1/3 p-5">
                     <div className="h-full p-0.5 bg-gradient-cyan transform hover:-translate-y-3 rounded-10 transition ease-out duration-1000">
                     <div className="h-full px-7 py-8 bg-white rounded-lg">
-                        <img className="mb-8" src="/banner-header.png" alt="" />
+                        <img className="mb-8" src="/salon.jpg" alt="" />
                         <p className="mb-8 text-lg text-gray-900">&ldquo;
                         Una hallazgo culinario sin igual. Cada uno de los platos ha sido de plena satisfaccion asi como tambien un servicio profesional y amable. Los precios son acordes a lo ofrecido. Recomendable. 
                         &rdquo;</p>
@@ -31,7 +31,7 @@ const Press = () => {
                 <div className="w-full md:w-1/3 p-5">
                     <div className="h-full p-0.5 bg-gradient-cyan transform hover:-translate-y-3 rounded-10 shadow-5xl transition ease-out duration-1000">
                     <div className="h-full px-7 py-8 bg-white rounded-lg">
-                        <img className="mb-8" src="/banner-header.png" alt="" />
+                        <img className="mb-8" src="/roma.jpg" alt="" />
                         <p className="mb-8 text-lg text-gray-900">&ldquo;
                         Una hallazgo culinario sin igual. Cada uno de los platos ha sido de plena satisfaccion asi como tambien un servicio profesional y amable. Los precios son acordes a lo ofrecido. Recomendable. 
                         </p>
@@ -48,7 +48,7 @@ const Press = () => {
                 <div className="w-full md:w-1/3 p-5">
                     <div className="h-full p-0.5 bg-gradient-cyan transform hover:-translate-y-3 rounded-10 transition ease-out duration-1000">
                     <div className="h-full px-7 py-8 bg-white rounded-lg">
-                        <img className="mb-8" src="/banner-header.png" alt="" />
+                        <img className="mb-8" src="/lasana.jpg" alt="" />
                         <p className="mb-8 text-lg text-gray-900">&ldquo;
                         Una hallazgo culinario sin igual. Cada uno de los platos ha sido de plena satisfaccion asi como tambien un servicio profesional y amable. Los precios son acordes a lo ofrecido. Recomendable. 
                         &rdquo;</p>

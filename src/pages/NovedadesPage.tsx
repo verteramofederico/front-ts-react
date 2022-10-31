@@ -27,7 +27,7 @@ const NovedadesPage = () => {
 
     return (
         <section className="holder text-center">
-            <h2 className="text-4xl my-9">Novedades</h2>
+            <h2 className="text-4xl my-9 text-primary">Novedades</h2>
             {loading ? (
                 <p>Cargando...</p>
             ) : (
