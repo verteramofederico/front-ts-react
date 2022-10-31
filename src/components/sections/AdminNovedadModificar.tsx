@@ -24,19 +24,34 @@ const AdminNovedadModificar = (props: novedadTypeModificar) => {
         img_delete: ""
     });
 
-    const handleChange = (event: { target: { id: any; value: any; }; }) => {
+    const [newImage, setNewImage] = useState<any>([]);
+
+    const handleChange = (event: { target: { id: any; value: any, files: any }; }) => {
         setForm({
         ...form,
         [event.target.id]: event.target.value
-        });
+        })
+        console.log(form);
     };
+
+    const handleChangeImage = (event: { target: { files: any; }; }) => {
+        console.log(event.target.files[0])
+        setNewImage(event.target.files[0])
+        console.log(newImage)
+    }
 
     const handleSubmit = async (event: { preventDefault: () => void; }) => {
         event.preventDefault()
         const userData = JSON.parse(localStorage.getItem('user-data')|| '{}')   
+        
+        const formData = new FormData();
+        formData.append("selectedFile", newImage);
         await axios.post('http://localhost:3001/api/modificar', 
-                form, 
-                { headers: { 'authorization': `Bearer ${userData.token}` }}
+                {form, data: formData}, 
+                { headers: { 
+                    'authorization': `Bearer ${userData.token}`, 
+                    "Content-Type": "multipart/form-data" 
+                }}
             )
         setEditNew(false)
         setNovedadModificada(true)
@@ -63,6 +78,14 @@ const AdminNovedadModificar = (props: novedadTypeModificar) => {
                 type="text"
                 value={form.subtitle}
                 onChange={handleChange}
+                />
+                </div>
+
+                <div className="mt-8">
+                <input
+                type="file"
+                onChange={handleChangeImage}
+                /* onChange={handleChange} */
                 />
                 </div>
 
